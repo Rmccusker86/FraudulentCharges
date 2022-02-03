@@ -1,6 +1,6 @@
 # FraudulentCharges
 
-# Do fraudulent charges increase the more times a stolen credit card is used?
+# Do transactional amounts on fraudulent charges increase the more times a stolen credit card is used?
 
 Combine test and train transactional datasets, join on transaction ID
 
