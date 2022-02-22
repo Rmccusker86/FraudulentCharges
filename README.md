@@ -40,13 +40,13 @@ Dashboard
 * Our initial dataset yielded over 500K rows and 394 columns, showing timedelta, purchase amounts, card information, email and other address information, as well as other features displaying various information about each purchase.
 * We then created categoricals, which is a column of labels, and using the get_dummies function into indicator columns. Which contain either 0s or 1s.
 * After that a validation set was created using a fraction of the total rows, we opted for an 80%/20% split
-* The dataset turned out to be very inbalance so we implemented a Keras function called class_weights to balance it out. Simply put, depending on the inbalance it gives the portion of the data with the much lower number more importance to even out with the greater portion. An example, 500 samples of No and 1500 samples of Yes. The function would give the samples a weight of 3:1 respectively.
+* The dataset turned out to be very inbalanced so we implemented a Keras function called class_weights to balance it out. Simply put, depending on the inbalance it gives the portion of the data with the much lower number more importance to even out with the greater portion. An example, 500 samples of No and 1500 samples of Yes. The function would give the samples a weight of 3:1 respectively.
 * We proceeded to determine the correlation between the variables to determine how they were associated with each other.
 * Followed it up by getting the importances using all of the different variables defined previously in our code. Such as, our class_weights, correlations, sample of X, and feature importances.
 * The StandardScaler was used to transform the Dataframe to finalize our X and Y test DF's
 
 ## Keras Model
-The MLPClassifier, or Multi-Layer Perceptron classifier is an artificial beural network that generates a set of outputs from a set of inputs. As other models, it is characterized by several laters of input nodes connected as a directed graph (a signal path through the nodes only goes one way) between the input and output layers. 
+The MLPClassifier, or Multi-Layer Perceptron classifier is an artificial neural network that generates a set of outputs from a set of inputs. As other models, it is characterized by several laters of input nodes connected as a directed graph (a signal path through the nodes only goes one way) between the input and output layers. 
 * There were three layers used with the first two having 256 hidden layers activated on a "relu" and the third containing 1 hidden layer with the "sigmoid" activation. 
 * It was given a max_iter of 10 with an adaptive learning rate, and we used the most common solver of "adam" because it works the best on large datasets. (solver for weight optimization)
 * In total it gave us 201K trainable parameters
