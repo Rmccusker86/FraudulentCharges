@@ -57,6 +57,14 @@ The MLPClassifier, or Multi-Layer Perceptron classifier is an artificial neural 
 * The model ended up with a test accuracy of 91%
 * The output on the predictions was in probability form from 1-100 in a decimal form. Then we converted it to either a 1 or a 0, by rouding anything above a 50% to a 1.
 
+## Second ETL
+After the neural network gave us our results in probability form, we were left with binary cartegorical fields with a positive number for true, or a negative number for false. 
+* We uploaded the data into Tableau
+* Using countifs, we were able to calculate how many times each email domain was in the dataset.
+* Then using that were able to get the counts and percentages for how many times a fraud threat was predicted with each specific emails.
+* Another aspect of the data was the card type, ie Visa, Mastercard, Amex, etc.
+* We followed the same procedure with using countifs to count how many times each was used, as well as the percentage of fraud associated with each card.
+* After all of the calculated fields were created, the data was loaded into a new dataset from a CSV.
 
 ![image](https://user-images.githubusercontent.com/88358771/155248303-f34af85b-e1a7-4ac2-878f-d7f2d0bac9f4.png)
 
