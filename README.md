@@ -44,7 +44,7 @@ Dashboard
 * We then created categoricals, which is a column of labels, and using the get_dummies function into indicator columns. Which contain either 0s or 1s.
 * After that a validation set was created using a fraction of the total rows, we opted for an 80%/20% split
 * The dataset turned out to be very inbalanced so we implemented a Keras function called class_weights to balance it out. Simply put, depending on the inbalance it gives the portion of the data with the much lower number more importance to even out with the greater portion. An example, 500 samples of No and 1500 samples of Yes. The function would give the samples a weight of 3:1 respectively.
-* We proceeded to determine the correlation between the variables to determine how they were associated with each other.
+* We proceeded to determine the correlation between the variables to determine how they were associated with each other. We removed highly correlated fields except one of each group.
 * Followed it up by getting the importances using all of the different variables defined previously in our code. Such as, our class_weights, correlations, sample of X, and feature importances.
 * The StandardScaler was used to transform the Dataframe to finalize our X and Y test DF's
 
@@ -54,5 +54,5 @@ The MLPClassifier, or Multi-Layer Perceptron classifier is an artificial neural 
 * It was given a max_iter of 10 with an adaptive learning rate, and we used the most common solver of "adam" because it works the best on large datasets. (solver for weight optimization)
 * In total it gave us 201K trainable parameters
 * We trained for a total of 200 epochs, and found after that there was a very slight drop off of our AUC score.
-
 * The model ended up with a test accuracy of 91%
+* The output on the predictions was in probability form from 1-100 in a decimal form. Then we converted it to either a 1 or a 0, by rouding anything above a 50% to a 1.
