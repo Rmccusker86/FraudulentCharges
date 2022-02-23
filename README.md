@@ -26,12 +26,15 @@ https://www.kaggle.com/c/ieee-fraud-detection/overview
 ## Tools used
 Database
 * Amazon Web Services (AWS)
-* Amazon RDS and S3 
+* Amazon RDS and S3
+* Boto 3
+* AWS Wrangler 
 Data Analyizing
 * Pandas
 * Numpy
+* Python
 Machine Learning
-* Sklearn - metrics, preprocessing, ensemble, neural_network, exceptions
+* Sci-kitlearn - metrics, preprocessing, ensemble, neural_network, exceptions
 * Tensorflow - Keras
 Dashboard
 * Tableau
