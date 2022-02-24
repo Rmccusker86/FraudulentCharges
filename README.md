@@ -55,7 +55,7 @@ The MLPClassifier, or Multi-Layer Perceptron classifier is an artificial neural 
 * In total it gave us 201K trainable parameters
 * We trained for a total of 200 epochs, and found after that there was a very slight drop off of our AUC score.
 * The model ended up with a test accuracy of 91%
-* The output on the predictions was in probability form from 1-100 in a decimal form. Then we converted it to either a 1 or a 0, by rouding anything above a 50% to a 1.
+* The output on the predictions was in probability form from 1-100 in a decimal form. Then we converted it to either a 1 or a 0, by rounding anything above a 50% to a 1.
 
 ## Second ETL
 After the neural network gave us our results in probability form, we were left with binary cartegorical fields with a positive number for true, or a negative number for false. 
