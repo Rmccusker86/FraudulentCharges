@@ -24,20 +24,24 @@ https://www.kaggle.com/c/ieee-fraud-detection/overview
 * Do certain emails or card types have a higher fraud percentage.
 
 ## Tools used
-Database
+### Database
 * Amazon Web Services (AWS)
 * Amazon RDS and S3
 * Boto 3
 * AWS Wrangler 
-Data Analyizing
+
+### Data Analyizing
 * Pandas
 * Numpy
 * Python
-Machine Learning
-* Sci-kitlearn - metrics, preprocessing, ensemble, neural_network, exceptions
+
+### Machine Learning
+* Scikitlearn - metrics, preprocessing, ensemble, neural_network, exceptions
 * Tensorflow - Keras
-Dashboard
+
+### Dashboard
 * Tableau
+* Adobe Photoshop
 
 # Machine Learning Model
 * Our initial dataset yielded over 500K rows and 394 columns, showing timedelta, purchase amounts, card information, email and other address information, as well as other features displaying various information about each purchase.
@@ -55,7 +59,21 @@ The MLPClassifier, or Multi-Layer Perceptron classifier is an artificial neural 
 * In total it gave us 201K trainable parameters
 * We trained for a total of 200 epochs, and found after that there was a very slight drop off of our AUC score.
 * The model ended up with a test accuracy of 91%
+![image](https://user-images.githubusercontent.com/88358771/155445447-d7e2758d-972c-4241-9938-af298b3c7774.png)
+
+* This is a printed version of our final epoch. It lists the model loss, true positives, false negatives, true negatives, false positives, and finally the AUC score.
+
+  ![image](https://user-images.githubusercontent.com/88358771/155445396-e66ae090-9337-489c-a631-26cc5d8e57be.png)
+
+
 * The output on the predictions was in probability form from 1-100 in a decimal form. Then we converted it to either a 1 or a 0, by rounding anything above a 50% to a 1.
+
+Below is a picture of our model's AUC score and Loss over the 200 epochs ran.
+
+![image](https://user-images.githubusercontent.com/88358771/155445234-e4e59f62-e425-400c-a553-a041365fe269.png)
+
+![image](https://user-images.githubusercontent.com/88358771/155445257-89bb7a0e-12ae-497e-9cb1-41118889140f.png)
+
 
 ## Second ETL
 After the neural network gave us our results in probability form, we were left with binary cartegorical fields with a positive number for true, or a negative number for false. 
@@ -65,6 +83,12 @@ After the neural network gave us our results in probability form, we were left w
 * Another aspect of the data was the card type, ie Visa, Mastercard, Amex, etc.
 * We followed the same procedure with using countifs to count how many times each was used, as well as the percentage of fraud associated with each card.
 * After all of the calculated fields were created, the data was loaded into a new dataset from a CSV.
+
+Link to Google Slide presentation made with Photoshop
+https://docs.google.com/presentation/d/18B8TswA3bCDmy5kV9OQGJ9oAVx-6OAJN11BGg8FJ9AE/edit#slide=id.p
+
+Link to Tableau Dashboard
+https://public.tableau.com/app/profile/josh.daniels1595/viz/CLASSPROJECT/SECUR-ITCENTER
 
 ![image](https://user-images.githubusercontent.com/88358771/155248303-f34af85b-e1a7-4ac2-878f-d7f2d0bac9f4.png)
 
