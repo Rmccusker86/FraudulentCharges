@@ -53,9 +53,8 @@ https://www.kaggle.com/c/ieee-fraud-detection/overview
 * The StandardScaler was used to transform the Dataframe to finalize our X and Y test DF's
 
 ## Keras Model
-The MLPClassifier, or Multi-Layer Perceptron classifier is an artificial neural network that generates a set of outputs from a set of inputs. As other models, it is characterized by several laters of input nodes connected as a directed graph (a signal path through the nodes only goes one way) between the input and output layers. 
+The Keras Model is a deep learning API written in Python, running on top of the machine learning platform TensorFlow. It was developed with a focus on enabling fast experimentation. This API helps developers by lightening the cognitive load and is flexible in the aspect that it helps the workflow stay as easy as possible, while also arbitrarily advancing the workflows.  
 * There were three layers used with the first two having 256 hidden layers activated on a "relu" and the third containing 1 hidden layer with the "sigmoid" activation. 
-* It was given a max_iter of 10 with an adaptive learning rate, and we used the most common solver of "adam" because it works the best on large datasets. (solver for weight optimization)
 * In total it gave us 201K trainable parameters
 * We trained for a total of 200 epochs, and found after that there was a very slight drop off of our AUC score.
 * The model ended up with a test accuracy of 91%
